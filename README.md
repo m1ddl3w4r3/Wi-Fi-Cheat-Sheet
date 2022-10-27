@@ -25,12 +25,6 @@ Future plans:
 
 * fake AP with RADIUS to crack the WPA2 Enterprise authentication.
 
-My other cheat sheets:
-
-* [Penetration Testing Cheat Sheet](https://github.com/ivan-sincek/penetration-testing-cheat-sheet)
-* [iOS Penetration Testing Cheat Sheet](https://github.com/ivan-sincek/ios-penetration-testing-cheat-sheet)
-* [Android Testing Cheat Sheet](https://github.com/ivan-sincek/android-penetration-testing-cheat-sheet)
-
 ## Table of Contents
 
 **1. [Configuration](#1-configuration)**
