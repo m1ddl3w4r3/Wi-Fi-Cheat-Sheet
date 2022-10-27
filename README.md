@@ -378,4 +378,4 @@ Start scanning/enumerating the network.
 
 ## 6. Evil-Twin
 
-Find out how to set up a fake authentication web page on a fake WiFi network with WiFi Pineapple Mark VII Basic from my other [project](https://github.com/ivan-sincek/evil-twin), as well as how to set up all the tools from this cheat sheet.
+Find out how to set up a fake authentication web page on a fake WiFi network with WiFi Pineapple Mark VII Basic from my other [project](https://github.com/m1ddl3w4r3/Wi-Fi-Evil-Twin), as well as how to set up all the tools from this cheat sheet.
