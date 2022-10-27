@@ -1,10 +1,6 @@
 # WiFi Penetration Testing Cheat Sheet
 
-This is more of a checklist for myself. May contain useful tips and tricks.
-
-Everything was tested on Kali Linux v2021.4 (64-bit) and WiFi Pineapple Mark VII Basic with the firmware v1.0.2.
-
-Everything was tested on Kali Linux v2021.4 (64-bit) and WiFi Pineapple NANO with the firmware v2.7.0.
+The following information should ideally be obtained/enumerated when carrying out your wireless assessment. All this information is needed to give the tester, (and hence, the customer), a clear and concise picture of the network you are assessing. A brief overview of the network during a pre-site meeting with the customer should allow you to estimate the timescales required to carry the assessment out.
 
 For help with any of the tools type `<tool_name> [-h | -hh | --help]` or `man <tool_name>`.
 
