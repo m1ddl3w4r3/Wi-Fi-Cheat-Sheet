@@ -17,10 +17,6 @@ Websites that you should use while writing the report:
 
 Check the most popular tool for auditing wireless networks [v1s1t0r1sh3r3/airgeddon](https://github.com/v1s1t0r1sh3r3/airgeddon). Credits to the author!
 
-Future plans:
-
-* fake AP with RADIUS to crack the WPA2 Enterprise authentication.
-
 ## Table of Contents
 
 **1. [Configuration](#1-configuration)**
