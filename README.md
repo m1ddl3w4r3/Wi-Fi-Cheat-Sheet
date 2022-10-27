@@ -139,13 +139,13 @@ If you specified the output file, don't forget to stop `airodump-ng` after you a
 
 Use [Kismet](https://github.com/ivan-sincek/evil-twin#additional-kismet) or WiFi Pineapple to find more information about wireless access points, e.g. their MAC address, vendor's name, etc.
 
-## 3. Cracking
-
 Check if a wireless interface supports packet injection:
 
 ```fundamental
 aireplay-ng --test wlan1 -e essid -a FF:FF:FF:FF:FF:FF
 ```
+
+## 3. Cracking
 
 ### WPA/WPA2 Handshake
 
@@ -167,7 +167,7 @@ Start the dictionary attack against a WPA/WPA2 handshake:
 aircrack-ng -e essid -b FF:FF:FF:FF:FF:FF -w rockyou.txt airodump_essid_results*.cap
 ```
 
-### PMKID Attack
+## PMKID Attack
 
 Crack the WPA/WPA2 authentication without deauthenticating clients.
 
@@ -219,7 +219,8 @@ hashcat -m 16800 -a 0 --session=cracking --force --status -O -o hashcat_results.
 
 Find out more about Hashcat from my other [project](https://github.com/ivan-sincek/penetration-testing-cheat-sheet#hashcat).
 
-### ARP Request Replay Attack
+###WEP
+## ARP Request Replay Attack
 
 If target WiFi network is not busy, it can take days to capture enough IVs to crack the WEP authentication.
 
@@ -259,7 +260,7 @@ Crack the WEP authentication:
 aircrack-ng -e essid -b FF:FF:FF:FF:FF:FF replay_arp*.cap
 ```
 
-### Hitre Attack
+## Hitre Attack
 
 This attack targets clients, not wireless access points. You must know the SSIDs of your target's WiFi networks.
 
@@ -332,17 +333,9 @@ Another popular wordlist collections:
 * [weakpass.com/wordlist](https://weakpass.com/wordlist)
 * [packetstormsecurity.com/Crackers/wordlists](https://packetstormsecurity.com/Crackers/wordlists)
 
-### Password Spraying
+### Online Bruteforce for WPA3/WAP2 
 
-Find out how to generate a good password spraying wordlist from my other [project](https://github.com/ivan-sincek/wordlist-extender), but first you will need a few good keywords that describe your target.
-
-Such keywords can be a company name, abbreviations, words that describe your target's services, products, etc.
-
-After you generate the wordlist, use it with `aircrack-ng` to crack a WPA/WPA2 handshake.
-
-If strong password policy is enforced, passwords usually start with one capitalized word followed by a few digits and one special character at the end (e.g. Password123!).
-
-You can also use the generated wordlist with [Hashcat](https://github.com/ivan-sincek/penetration-testing-cheat-sheet#hashcat), e.g. to crack NTLMv2 hashes that you have collected using LLMNR responder, etc.
+Check the team blunderbuss-wctf for their online bruteforce tool. [blunderbuss-wctf/wacker](https://github.com/blunderbuss-wctf/wacker)Credits to the author!
 
 ## 5. Post-Exploitation
 
@@ -355,14 +348,16 @@ ifconfig wlan0 down && macchanger --mac FF:FF:FF:FF:FF:FF && ifconfig wlan0 up
 Once you get an access to a WiFi network, run the following tools:
 
 ```fundamental
-yersinia -G
-
-responder -wF -I 192.168.8.5
-
 wireshark
+
+nmap
+
+responder
+
+Just a regular pentest from here on out.
 ```
 
-Find out how to pipe `tcpdump` from WiFi Pineapple to Wireshark from my other [poject](https://github.com/ivan-sincek/evil-twin#additional-sniff-wifi-network-traffic).
+Find out how to pipe `tcpdump` from WiFi Pineapple to Wireshark from my other [poject](https://github.com/m1ddl3w4r3/Wi-Fi-Evil-Twin#additional-sniff-wifi-network-traffic).
 
 Try to access the wireless access point's web interface. Search the Internet for default paths and credentials.
 
