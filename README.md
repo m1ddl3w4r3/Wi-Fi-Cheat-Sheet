@@ -357,7 +357,7 @@ responder
 Just a regular pentest from here on out.
 ```
 
-Find out how to pipe `tcpdump` from WiFi Pineapple to Wireshark from my other [poject](https://github.com/m1ddl3w4r3/Wi-Fi-Evil-Twin#additional-sniff-wifi-network-traffic).
+Find out how to pipe `tcpdump` from WiFi Pineapple to Wireshark from my other [poject](https://github.com/m1ddl3w4r3/Wi-Fi-Evil-Twin#sniff-wifi-network-traffic).
 
 Try to access the wireless access point's web interface. Search the Internet for default paths and credentials.
 
